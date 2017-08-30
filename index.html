@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Persuasion Principles</title>
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    
+    <body>
+        <section class="container">
+            
+            <div id="about">
+                <h1>persuasion principles</h1>
+                
+                <p>these are a collection of principles we learned throughout the semester in persuasion.</p>
+                
+                <p>my goal was to create a visual system that could <b>give information on how the principle is perceived</b> by means of sentiment analysis and in terms of its utilization of positive/negative emotions, and conscious/subconscious methods of persuasion.</p>
+                
+                <p>the sentiment analysis is used as an objective source to determine how positive or negative the term is. as a result, some terms that aren't more commonly used have a neutral color. <b>the sentiment analysis score (from -1 to 1) is on the bottom right of the card.</b> the colors indicate a positive, neutral, or negative score.</p>
+                
+                <p><b>the gradient on the front of the card is used to visualize more subjective labels on two axes (example on the right)</b> the positive/negative emotions commonly associated with the term, and the use of conscious/subconscious methods.</p>
+                
+                <p>on the back of the cards <b>(click to flip!)</b>, i write the definition, as well as my reasoning for the subjective labels.</p>
+            </div>
+            
+            <div id="examplecard">
+                <img src="assets/examplecard-49-49.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-05.png">
+                <img class="back" src="assets/cardbacks/cardback-38.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-02.png">
+                <img class="back" src="assets/cardbacks/cardback-36.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-06.png">
+                <img class="back" src="assets/cardbacks/cardback-39.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-07.png">
+                <img class="back" src="assets/cardbacks/cardback-40.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-04.png">
+                <img class="back" src="assets/cardbacks/cardback-37.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-09.png">
+                <img class="back" src="assets/cardbacks/cardback-35.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-24.png">
+                <img class="back" src="assets/cardbacks/cardback-44.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-23.png">
+                <img class="back" src="assets/cardbacks/cardback-43.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-25.png">
+                <img class="back" src="assets/cardbacks/cardback-45.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-27.png">
+                <img class="back" src="assets/cardbacks/cardback-47.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-26.png">
+                <img class="back" src="assets/cardbacks/cardback-46.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-28.png">
+                <img class="back" src="assets/cardbacks/cardback-48.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-03.png">
+                <img class="back" src="assets/cardbacks/cardback-42.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-22.png">
+                <img class="back" src="assets/cardbacks/cardback-41.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-12.png">
+                <img class="back" src="assets/cardbacks/cardback-34.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-11.png">
+                <img class="back" src="assets/cardbacks/cardback-33.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-01.png">
+                <img class="back" src="assets/cardbacks/cardback-30.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-10.png">
+                <img class="back" src="assets/cardbacks/cardback-32.png">
+            </div>
+            
+            <div class="card effect__click">
+                <img class="front" src="assets/cardfronts/cardfront-13.png">
+                <img class="back" src="assets/cardbacks/cardback-29.png">
+            </div>
+            
+            <div class="card effect__click">
+                    <img class="front" src="assets/cardfronts/cardfront-08.png">
+                    <img class="back" src="assets/cardbacks/cardback-31.png">
+            </div>
+            
+        </section>
+    
+            <script>
+                (function() {
+                      var cards = document.querySelectorAll(".card.effect__click");
+                      for ( var i  = 0, len = cards.length; i < len; i++ ) {
+                        var card = cards[i];
+                        clickListener( card );
+                      }
+
+                      function clickListener(card) {
+                        card.addEventListener( "click", function() {
+                          var c = this.classList;
+                          c.contains("flipped") === true ? c.remove("flipped") : c.add("flipped");
+                        });
+                      }
+                    })();
+            </script>
+    </body>
+</html>
